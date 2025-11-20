@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+<!--    Fragmento Lista Plagas-->
+
+
+
+    <!-- Fragmento Principal - Menú -->
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.proyectomoviles.HomeFragment"
+        android:label="Slembra"
+        tools:layout="@layout/fragment_home">
+
+        <!-- Acciones de navegación -->
+        <action
+            android:id="@+id/action_homeFragment_to_huertaFragment"
+            app:destination="@id/huertaFragment" />
+
+        <action
+            android:id="@+id/action_homeFragment_to_calendarioFragment"
+            app:destination="@id/calendarioFragment" />
+
+        <action
+            android:id="@+id/action_homeFragment_to_plagasFragment"
+            app:destination="@id/plagasFragment" />
+
+        <action
+            android:id="@+id/action_homeFragment_to_tiposCultivoFragment"
+            app:destination="@id/tiposCultivoFragment" />
+    </fragment>
+
+    <!-- Fragmentos de Destino -->
+    <fragment
+        android:id="@+id/huertaFragment"
+        android:name="com.example.proyectomoviles.HuertaFragment"
+        android:label="Huerta"
+        tools:layout="@layout/fragment_huerta" />
+
+    <fragment
+        android:id="@+id/calendarioFragment"
+        android:name="com.example.proyectomoviles.CalendarioFragment"
+        android:label="Calendario"
+        tools:layout="@layout/fragment_calendario" />
+
+    <fragment
+        android:id="@+id/plagasFragment"
+        android:name="com.example.proyectomoviles.PlagasFragment"
+        android:label="Plagas"
+        tools:layout="@layout/fragment_plagas" />
+
+    <fragment
+        android:id="@+id/tiposCultivoFragment"
+        android:name="com.example.proyectomoviles.TipoCultivosFragment"
+        android:label="Tipos de Cultivo"
+        tools:layout="@layout/fragment_tipo_cultivos" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.proyectomoviles.ui.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" />
+
+</navigation>

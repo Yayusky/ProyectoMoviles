@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="gray">#FF9E9E9E</color>
+
+    <!-- Colores para las cards -->
+    <color name="green_dark">#FF388E3C</color>
+    <color name="green_light">#FFC8E6C9</color>
+    <color name="blue_dark">#FF1976D2</color>
+    <color name="red_dark">#FFD32F2F</color>
+    <color name="orange_dark">#FFF57C00</color>
+    <color name="orange_light">#FFFFE0B2</color>
+</resources>
