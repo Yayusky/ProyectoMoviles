@@ -15,9 +15,15 @@ import java.util.List;
 public class AdaptadorPlagas extends RecyclerView.Adapter<AdaptadorPlagas.PlagaViewHolder> {
 
     private List<Plaga> listaPlagas;
+    private OnPlagaClickListener listener;
 
-    public AdaptadorPlagas(List<Plaga> listaPlagas) {
+
+    public AdaptadorPlagas(List<Plaga> listaPlagas, OnPlagaClickListener listener) {
         this.listaPlagas = listaPlagas;
+        this.listener = listener;
+    }
+    public interface OnPlagaClickListener {
+        void onPlagaClick(Plaga plaga);
     }
 
     @NonNull
@@ -32,6 +38,25 @@ public class AdaptadorPlagas extends RecyclerView.Adapter<AdaptadorPlagas.PlagaV
     public void onBindViewHolder(@NonNull PlagaViewHolder holder, int position) {
         Plaga plaga = listaPlagas.get(position);
         holder.bind(plaga);
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int pos = holder.getAdapterPosition();
+                if (pos != RecyclerView.NO_POSITION) {
+                    listener.onPlagaClick(listaPlagas.get(pos));
+                }
+            }
+        });
+
+//        holder.itemView.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                listener.onPlagaClick(plaga);
+//            }
+//        });
+
+
     }
 
     @Override
@@ -84,6 +109,8 @@ public class AdaptadorPlagas extends RecyclerView.Adapter<AdaptadorPlagas.PlagaV
             String textoRemedios = "💡 " + numRemedios + " remedio" + (numRemedios != 1 ? "s" : "") + " natural" + (numRemedios != 1 ? "es" : "") + " disponible" + (numRemedios != 1 ? "s" : "");
             textRemediosDisponibles.setText(textoRemedios);
         }
+
+
     }
 }
 

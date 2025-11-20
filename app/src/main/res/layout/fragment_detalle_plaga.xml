@@ -1,0 +1,76 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Imagen de la plaga -->
+        <ImageView
+            android:id="@+id/imagePlaga"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Nombre común -->
+        <TextView
+            android:id="@+id/textTituloPlaga"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_marginBottom="2dp"
+            android:textColor="#222" />
+
+        <!-- Nombre científico -->
+        <TextView
+            android:id="@+id/textNombreCientifico"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="#666"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Descripción corta -->
+        <TextView
+            android:id="@+id/textDescripcionCorta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:layout_marginBottom="8dp"
+            android:textColor="#333" />
+
+
+        <!-- Descripción larga -->
+        <TextView
+            android:id="@+id/textDescripcionLarga"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:layout_marginBottom="12dp"
+            android:textColor="#333" />
+
+        <!-- Título Soluciones -->
+        <TextView
+            android:id="@+id/textTituloSoluciones"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¿Como Solucionarlo?"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginBottom="2dp"
+            android:textColor="#222" />
+
+        <!-- Contenedor de remedios -->
+        <LinearLayout
+            android:id="@+id/layoutRemedios"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"/>
+
+    </LinearLayout>
+</ScrollView>
+

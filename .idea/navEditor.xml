@@ -102,6 +102,11 @@
             <LayoutPositions>
               <option name="myPositions">
                 <map>
+                  <entry key="action_plagasFragment_to_detallePlagaFragment">
+                    <value>
+                      <LayoutPositions />
+                    </value>
+                  </entry>
                   <entry key="calendarioFragment">
                     <value>
                       <LayoutPositions>
@@ -109,6 +114,18 @@
                           <Point>
                             <option name="x" value="256" />
                             <option name="y" value="1080" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="detallePlagaFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="12" />
+                            <option name="y" value="12" />
                           </Point>
                         </option>
                       </LayoutPositions>
@@ -157,18 +174,6 @@
                           <Point>
                             <option name="x" value="256" />
                             <option name="y" value="724" />
-                          </Point>
-                        </option>
-                      </LayoutPositions>
-                    </value>
-                  </entry>
-                  <entry key="loginFragment">
-                    <value>
-                      <LayoutPositions>
-                        <option name="myPosition">
-                          <Point>
-                            <option name="x" value="12" />
-                            <option name="y" value="12" />
                           </Point>
                         </option>
                       </LayoutPositions>

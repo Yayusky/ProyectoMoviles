@@ -1,8 +1,9 @@
 package com.example.proyectomoviles.modelos;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class Plaga {
+public class Plaga implements Serializable {
 
     private String _id, nombreP, nombreCien, definicion, img;
     private List<RemedioPlaga> remedio;

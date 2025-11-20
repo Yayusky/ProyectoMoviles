@@ -51,17 +51,34 @@
         android:id="@+id/plagasFragment"
         android:name="com.example.proyectomoviles.PlagasFragment"
         android:label="Plagas"
-        tools:layout="@layout/fragment_plagas" />
+        tools:layout="@layout/fragment_plagas"/>
+
+    <action
+        android:id="@+id/action_plagasFragment_to_detallePlagaFragment"
+        app:destination="@id/detallePlagaFragment" />
+
+
+    <fragment
+        android:id="@+id/detallePlagaFragment"
+        android:name="com.example.proyectomoviles.DetallePlagaFragment"
+        android:label="Detalle de Plaga">
+        <argument
+            android:name="plaga"
+            app:argType="com.example.proyectomoviles.modelos.Plaga" />
+    </fragment>
+
+
+
 
     <fragment
         android:id="@+id/tiposCultivoFragment"
         android:name="com.example.proyectomoviles.TipoCultivosFragment"
         android:label="Tipos de Cultivo"
         tools:layout="@layout/fragment_tipo_cultivos" />
-    <fragment
-        android:id="@+id/loginFragment"
-        android:name="com.example.proyectomoviles.ui.login.LoginFragment"
-        android:label="fragment_login"
-        tools:layout="@layout/fragment_login" />
+<!--    <fragment-->
+<!--        android:id="@+id/loginFragment"-->
+<!--        android:name="com.example.proyectomoviles.ui.login.LoginFragment"-->
+<!--        android:label="fragment_login"-->
+<!--        tools:layout="@layout/fragment_login" />-->
 
 </navigation>

@@ -1,6 +1,8 @@
 package com.example.proyectomoviles.modelos;
 
-public class RemedioPlaga {
+import java.io.Serializable;
+
+public class RemedioPlaga implements Serializable {
     private String nombre, descripcion, ingredientes, preparativo, aplicacion, imgRemedio;
 
     public RemedioPlaga() {

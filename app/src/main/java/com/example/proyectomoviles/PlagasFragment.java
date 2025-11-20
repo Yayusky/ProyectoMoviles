@@ -11,6 +11,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.fragment.NavHostFragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.proyectomoviles.api.PlantaApiServicio;
@@ -46,6 +47,8 @@ public class PlagasFragment extends Fragment {
         cargarPlagas();
     }
 
+
+
     private void inicializarVistas(View view) {
         recyclerViewPlagas = view.findViewById(R.id.recyclerViewPlagas);
         progressBarPlagas = view.findViewById(R.id.progressBar);
@@ -53,19 +56,19 @@ public class PlagasFragment extends Fragment {
     }
 
     private void configurarRecyclerView() {
-        adaptadorPlagas = new AdaptadorPlagas(listaPlagas);
+        adaptadorPlagas = new AdaptadorPlagas(listaPlagas, new AdaptadorPlagas.OnPlagaClickListener() {
+            @Override
+            public void onPlagaClick(Plaga plaga) {
+                Bundle bundle = new Bundle();
+                bundle.putSerializable("plaga", plaga);
+                NavHostFragment.findNavController(PlagasFragment.this)
+                        .navigate(R.id.action_plagasFragment_to_detallePlagaFragment, bundle);
+            }
+        });
         recyclerViewPlagas.setLayoutManager(new LinearLayoutManager(getContext()));
         recyclerViewPlagas.setAdapter(adaptadorPlagas);
     }
 
-//    private void configurarRecyclerView() {
-//        adaptadorPlagas = new AdaptadorPlagas(listaPlagas, plaga -> {
-//
-//        });
-//
-//        recyclerViewPlagas.setLayoutManager(new LinearLayoutManager(getContext()));
-//        recyclerViewPlagas.setAdapter(adaptadorPlagas);
-//    }
 
     private void cargarPlagas() {
         mostrarCargando(true);
