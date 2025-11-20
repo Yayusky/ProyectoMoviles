@@ -32,6 +32,10 @@ public class RetrofitCliente {
     public static PlantaApiServicio getPlantaService() {
         return obtener().create(PlantaApiServicio.class);
     }
+    public static UsuarioApiServicio getUsuarioService() {
+        return obtener().create(UsuarioApiServicio.class);
+    }
+
 
 
 
