@@ -70,6 +70,8 @@ dependencies {
     implementation("com.github.bumptech.glide:glide:4.16.0")
     implementation("com.squareup.picasso:picasso:2.8")
 
+    implementation("androidx.cardview:cardview:1.0.0")
+
     //Implementacion de volley
     //implementation("com.android.volley:volley:1.1.1")
 

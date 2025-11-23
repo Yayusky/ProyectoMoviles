@@ -1,64 +1,81 @@
 package com.example.proyectomoviles;
-
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link CalendarioFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+import com.example.proyectomoviles.api.PlantaApiServicio;
+import com.example.proyectomoviles.api.RetrofitCliente;
+import com.example.proyectomoviles.modelos.Planta;
+
+import java.util.Calendar;
+import java.util.List;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
+import java.util.Calendar;
+import java.util.List;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
 public class CalendarioFragment extends Fragment {
-
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
-    public CalendarioFragment() {
-        // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment CalendarioFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static CalendarioFragment newInstance(String param1, String param2) {
-        CalendarioFragment fragment = new CalendarioFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
+    private RecyclerView recyclerView;
+    private AdaptadorPlantas adapter;
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_calendario, container, false);
+
+        recyclerView = view.findViewById(R.id.recyclerPlantas);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        adapter = new AdaptadorPlantas();
+        recyclerView.setAdapter(adapter);
+
+        adapter.setOnItemClickListener((planta, itemView) -> {
+            Bundle bundle = new Bundle();
+            bundle.putSerializable("planta", planta);
+
+            NavController navController = Navigation.findNavController(itemView);
+            navController.navigate(R.id.action_calendarioFragment_to_detallePlantaFragment, bundle);
+        });
+
+        obtenerPlantasDelMes();
+
+        return view;
     }
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_calendario, container, false);
+    private void obtenerPlantasDelMes() {
+        Calendar calendar = Calendar.getInstance();
+        int mesActual = calendar.get(Calendar.MONTH) + 1;
+
+        PlantaApiServicio api = RetrofitCliente.getPlantaService();
+        Call<List<Planta>> call = api.getPlantasPorMes(mesActual);
+        call.enqueue(new Callback<List<Planta>>() {
+            @Override
+            public void onResponse(Call<List<Planta>> call, Response<List<Planta>> response) {
+                if (response.isSuccessful() && response.body() != null) {
+                    adapter.setPlantas(response.body());
+                }
+            }
+            @Override
+            public void onFailure(Call<List<Planta>> call, Throwable t) {
+                // Manejo de error
+            }
+        });
     }
 }
+

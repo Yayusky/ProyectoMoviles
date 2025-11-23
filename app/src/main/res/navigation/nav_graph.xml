@@ -44,8 +44,15 @@
     <fragment
         android:id="@+id/calendarioFragment"
         android:name="com.example.proyectomoviles.CalendarioFragment"
-        android:label="Calendario"
-        tools:layout="@layout/fragment_calendario" />
+        android:label="Calendario" >
+        <action
+            android:id="@+id/action_calendarioFragment_to_detallePlantaFragment"
+            app:destination="@id/detallePlantaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detallePlantaFragment"
+        android:name="com.example.proyectomoviles.DetallePlantaFragment"
+        android:label="DetallePlanta" />
 
     <fragment
         android:id="@+id/plagasFragment"
@@ -116,6 +123,9 @@
             android:id="@+id/action_registroUsuarioFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
     </fragment>
+
+
+
 
 
 </navigation>

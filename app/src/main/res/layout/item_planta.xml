@@ -1,6 +1,140 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/imagenPlanta"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:scaleType="centerCrop"
+            android:contentDescription="dfadsfsdaf" />
+
+        <TextView
+            android:id="@+id/nombrePlanta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:paddingTop="4dp"
+            android:textColor="#222"/>
+
+        <TextView
+            android:id="@+id/descPlanta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:maxLines="2"
+            android:textColor="#444"/>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
+
+
+
+
+
+
+
+
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    android:layout_width="370dp"-->
+<!--    android:layout_height="390dp"-->
+<!--    android:layout_margin="8dp"-->
+<!--    app:cardCornerRadius="12dp"-->
+<!--    app:cardElevation="4dp"-->
+<!--    app:cardUseCompatPadding="true">-->
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="vertical">-->
+
+<!--        &lt;!&ndash; Imagen de la plaga - SIMPLE &ndash;&gt;-->
+<!--        <ImageView-->
+<!--            android:id="@+id/imagePlaga"-->
+<!--            android:layout_width="328dp"-->
+<!--            android:layout_height="240dp"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:layout_marginEnd="10dp"-->
+<!--            android:layout_marginStart="10dp"-->
+<!--            android:layout_marginBottom="10dp"-->
+
+<!--            android:scaleType="centerCrop"-->
+<!--            android:background="#F5F5F5"-->
+<!--            android:contentDescription="Imagen de la plaga" />-->
+
+<!--        &lt;!&ndash; Contenido textual &ndash;&gt;-->
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="vertical"-->
+<!--            android:padding="16dp">-->
+
+<!--            &lt;!&ndash; Título de la plaga &ndash;&gt;-->
+<!--            <TextView-->
+<!--                android:id="@+id/textTituloPlaga"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Titulo Planta"-->
+<!--                android:textSize="20dp"-->
+<!--                android:textStyle="bold"-->
+<!--                android:textColor="@android:color/black" />-->
+
+<!--            &lt;!&ndash; Nombre científico &ndash;&gt;-->
+<!--            <TextView-->
+<!--                android:id="@+id/textNombreCientifico"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Seleccione esta para ti"-->
+<!--                android:textSize="14sp"-->
+<!--                android:textColor="@color/blue_dark"-->
+<!--                android:textStyle="bold"-->
+<!--                android:layout_marginTop="4dp" />-->
+
+<!--            &lt;!&ndash; Línea divisoria &ndash;&gt;-->
+<!--&lt;!&ndash;            <View&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_height="1dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:background="@android:color/darker_gray"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_marginTop="12dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_marginBottom="12dp" />&ndash;&gt;-->
+
+<!--            &lt;!&ndash; Descripción de la planta &ndash;&gt;-->
+<!--            <TextView-->
+<!--                android:id="@+id/textDescripcionPlaga"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Descripcion de la planta"-->
+<!--                android:textSize="14sp"-->
+<!--                android:textColor="@color/cardview_dark_background"-->
+<!--                android:maxLines="3"-->
+<!--                android:ellipsize="end"-->
+<!--                android:lineSpacingExtra="4dp" />-->
+
+<!--            &lt;!&ndash; Información de remedios disponibles &ndash;&gt;-->
+<!--&lt;!&ndash;            <TextView&ndash;&gt;-->
+<!--&lt;!&ndash;                android:id="@+id/textRemediosDisponibles"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:text=""&ndash;&gt;-->
+<!--&lt;!&ndash;                android:textSize="12sp"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:textColor="@color/green_dark"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_marginTop="12dp" />&ndash;&gt;-->
+
+<!--        </LinearLayout>-->
+
+<!--    </LinearLayout>-->
+
+<!--</com.google.android.material.card.MaterialCardView>-->

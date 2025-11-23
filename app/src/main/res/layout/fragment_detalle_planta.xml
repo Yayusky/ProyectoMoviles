@@ -1,0 +1,69 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:padding="16dp"
+        android:layout_width="match_parent" android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/imagenDetalle"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:scaleType="centerCrop"/>
+        <TextView
+            android:id="@+id/nombreDetalle"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"/>
+
+        <TextView
+            android:id="@+id/nombreCientificoDetalle"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textSize="18sp"
+            android:textColor="#888"/>
+
+
+        <TextView
+            android:id="@+id/descripcionDetalle"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:paddingTop="4dp"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/tipoPlantaDetalle"/>
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/climaDetalle"/>
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/sueloDetalle"/>
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/tiempoVidaDetalle"/>
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/mesesSiembraDetalle"/>
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/riegoDetalle" android:paddingBottom="12dp"/>
+
+        <Button android:id="@+id/btnSembrar"
+            android:text="Sembrar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#68B165"
+            android:textColor="#fff"/>
+    </LinearLayout>
+</ScrollView>
