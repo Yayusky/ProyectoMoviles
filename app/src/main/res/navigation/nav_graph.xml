@@ -49,10 +49,26 @@
             android:id="@+id/action_calendarioFragment_to_detallePlantaFragment"
             app:destination="@id/detallePlantaFragment" />
     </fragment>
+
+
+
+
     <fragment
         android:id="@+id/detallePlantaFragment"
-        android:name="com.example.proyectomoviles.DetallePlantaFragment"
-        android:label="DetallePlanta" />
+        android:name="com.example.proyectomoviles.DetallePlantaFragment">
+        <action
+            android:id="@+id/action_detallePlantaFragment_to_registroHuertoFragment"
+            app:destination="@id/registroHuertoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registroHuertoFragment"
+        android:name="com.example.proyectomoviles.RegistroHuertoFragment" />
+
+
+
+
+
+
 
     <fragment
         android:id="@+id/plagasFragment"

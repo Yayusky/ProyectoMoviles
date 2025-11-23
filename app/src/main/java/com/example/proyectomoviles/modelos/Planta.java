@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.List;
 
 public class Planta implements Serializable {
-    private String _id, nombre, nombreC, descripcion, tipo, clima,
+    private String _id, nombre, nombreC, descripcion, tipo, clima,riego,
             temperaturaMin, temperaturaMax, numRiegoXSemana, suelo, urlImagen;
     private List<Etapa> etapas;
     private int faseInicial;
@@ -63,8 +63,13 @@ public class Planta implements Serializable {
     public String getUrlImagen() { return urlImagen; }
     public void setUrlImagen(String urlImagen) { this.urlImagen = urlImagen; }
 
+    public String getRiego() {
+        return riego;
+    }
 
-
+    public void setRiego(String riego) {
+        this.riego = riego;
+    }
 
     // Clase anidada para Etapa
     public static class Etapa implements Serializable {

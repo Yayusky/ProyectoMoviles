@@ -8,6 +8,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Button;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 
 import com.example.proyectomoviles.modelos.Planta;
 import com.squareup.picasso.Picasso;
@@ -47,8 +49,12 @@ public class DetallePlantaFragment extends Fragment {
         riego.setText("Riego: " + planta.getNumRiegoXSemana() + " veces por semana");
 
         btnSembrar.setOnClickListener(v -> {
-            // Acción al sembrar
+            Bundle args = new Bundle();
+            args.putSerializable("planta", planta);
+            NavController navController = Navigation.findNavController(v);
+            navController.navigate(R.id.action_detallePlantaFragment_to_registroHuertoFragment, args);
         });
+
 
         return view;
     }
