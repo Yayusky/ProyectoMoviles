@@ -1,5 +1,7 @@
 package com.example.proyectomoviles;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -7,6 +9,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -53,18 +56,43 @@ public class LoginFragment extends Fragment {
             String email = editEmail.getText().toString();
             String password = editPassword.getText().toString();
 
+            if (email.isEmpty() || password.isEmpty()) {
+                Toast.makeText(getContext(), "Completa correo y contraseña", Toast.LENGTH_SHORT).show();
+                return;
+            }
+
             UsuarioApiServicio api = RetrofitCliente.getUsuarioService();
             Map<String, String> body = new HashMap<>();
             body.put("email", email);
             body.put("pa$$", password);
+
+
 
             Call<Map<String, Object>> call = api.loginUsuario(body);
             call.enqueue(new Callback<Map<String, Object>>() {
                 @Override
                 public void onResponse(Call<Map<String, Object>> call, Response<Map<String, Object>> response) {
                     if (response.isSuccessful()) {
+
+                        Map<String, Object> data = response.body();
+
+                        if (data != null && data.containsKey("user")) {
+
+                            Map<String, Object> userMap = (Map<String, Object>) data.get("user");
+
+                            if (userMap != null && userMap.containsKey("_id")) {
+
+                                String usuarioId = userMap.get("_id").toString();
+
+                                // Guardar en SharedPreferences
+                                SharedPreferences prefs = requireActivity().getSharedPreferences("usuarioPrefs", Context.MODE_PRIVATE);
+                                prefs.edit().putString("usuarioId", usuarioId).apply();
+
+                                Log.d("LoginFragment", "ID guardado: " + usuarioId);
+                            }
+                        }
+
                         Toast.makeText(getContext(), "Login correcto", Toast.LENGTH_SHORT).show();
-                        // Puedes navegar al home u otra pantalla aquí
                         NavHostFragment.findNavController(LoginFragment.this)
                                 .navigate(R.id.action_loginFragment_to_homeFragment);
 
@@ -72,6 +100,8 @@ public class LoginFragment extends Fragment {
                         Toast.makeText(getContext(), "Credenciales incorrectas", Toast.LENGTH_SHORT).show();
                     }
                 }
+
+
 
                 @Override
                 public void onFailure(Call<Map<String, Object>> call, Throwable t) {

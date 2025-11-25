@@ -1,13 +1,15 @@
 package com.example.proyectomoviles.modelos;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Huerto implements Serializable {
-    private String _id;
+    @SerializedName("usuario_id")
+    private String UsuarioId;
     private String nombre;
-    private String usuarioId;
     private String fechaRegistro;
     private List<PlantaSembrada> plantasSembradas = new ArrayList<>();
     private String tipoSuelo;
@@ -16,12 +18,11 @@ public class Huerto implements Serializable {
     private boolean activo = true;
 
     // Getters y setters
-    public String getId() { return _id; }
-    public void setId(String id) { this._id = id; }
+    public String getUsuarioId() { return UsuarioId; }
+    public void setUsuarioId(String id) { this.UsuarioId = id; }
     public String getNombre() { return nombre; }
     public void setNombre(String nombre) { this.nombre = nombre; }
-    public String getUsuarioId() { return usuarioId; }
-    public void setUsuarioId(String usuarioId) { this.usuarioId = usuarioId; }
+
     public String getFechaRegistro() { return fechaRegistro; }
     public void setFechaRegistro(String fechaRegistro) { this.fechaRegistro = fechaRegistro; }
     public List<PlantaSembrada> getPlantasSembradas() { return plantasSembradas; }

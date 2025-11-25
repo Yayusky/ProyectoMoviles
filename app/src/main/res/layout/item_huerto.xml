@@ -1,0 +1,174 @@
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="4dp"
+    android:layout_marginVertical="8dp">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:background="#F7F4FA"
+        android:padding="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imgMiniPlanta"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="12dp"
+            app:shapeAppearanceOverlay="@style/ShapeAppearance.MaterialComponents.SmallComponent"
+            android:scaleType="centerCrop" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvNombreHuerto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:text="[Nombre del Huerto]"
+                android:maxLines="1"/>
+
+            <TextView
+                android:id="@+id/tvNombrePlanta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="[Nombre de Planta]"
+                android:textSize="14sp"
+                android:textColor="?android:textColorSecondary"
+                android:maxLines="1"/>
+        </LinearLayout>
+
+        <!-- Opcional: iconos o más info aquí -->
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>
+
+
+
+
+
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<androidx.cardview.widget.CardView-->
+<!--    xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:card_view="http://schemas.android.com/apk/res-auto"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    card_view:cardCornerRadius="16dp"-->
+<!--    card_view:cardElevation="6dp"-->
+<!--    android:layout_margin="8dp">-->
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="vertical"-->
+<!--        android:padding="16dp"-->
+<!--        android:background="@android:color/white">-->
+
+<!--        &lt;!&ndash; Encabezado planta + imagen &ndash;&gt;-->
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:paddingBottom="8dp">-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="2"-->
+<!--                android:orientation="vertical">-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/nombrePlanta"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Jitomate"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:textSize="18sp"/>-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/nombreCientifico"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Solanum Lycopersicum"-->
+<!--                    android:textSize="14sp"-->
+<!--                    android:textColor="#555"/>-->
+<!--            </LinearLayout>-->
+
+<!--            <ImageView-->
+<!--                android:id="@+id/imagenPlanta"-->
+<!--                android:layout_width="64dp"-->
+<!--                android:layout_height="64dp"-->
+<!--                android:layout_marginStart="8dp"-->
+<!--                android:layout_gravity="center_vertical"-->
+<!--                android:scaleType="centerInside"-->
+<!--                 />-->
+<!--        </LinearLayout>-->
+
+<!--        &lt;!&ndash; Detalles de huerto y fechas &ndash;&gt;-->
+<!--        <TextView-->
+<!--            android:id="@+id/nombreHuerto"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Huerto 1"-->
+<!--            android:textStyle="bold"-->
+<!--            android:textSize="16sp"-->
+<!--            android:paddingBottom="4dp"/>-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/fechaSiembra"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Sembrado el 20/09/2025"-->
+<!--            android:textSize="13sp"-->
+<!--            android:paddingBottom="2dp"/>-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/proximoRiego"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Próximo riego: 27/11/2025"-->
+<!--            android:textSize="13sp"-->
+<!--            android:paddingBottom="8dp"/>-->
+
+<!--        &lt;!&ndash; Información de cosecha &ndash;&gt;-->
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="vertical"-->
+<!--            android:background="#F6F6F6"-->
+<!--            android:padding="8dp"-->
+<!--            android:layout_marginTop="4dp"-->
+<!--            android:layout_marginBottom="4dp">-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/infoCosecha"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Cosecha en 2 meses"-->
+<!--                android:textSize="13sp"/>-->
+
+<!--        </LinearLayout>-->
+
+<!--        &lt;!&ndash; Recomendaciones &ndash;&gt;-->
+<!--        <TextView-->
+<!--            android:id="@+id/recomendaciones"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Los jitomates se deben cosechar cuando..."-->
+<!--            android:textSize="13sp"-->
+<!--            android:paddingTop="4dp"-->
+<!--            android:paddingBottom="4dp" />-->
+
+<!--    </LinearLayout>-->
+
+
+
+<!--</androidx.cardview.widget.CardView>-->

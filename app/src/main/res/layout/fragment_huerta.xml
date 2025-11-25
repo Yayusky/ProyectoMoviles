@@ -1,26 +1,275 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@android:color/white"
-    android:gravity="center"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:padding="24dp">
+    android:background="?android:attr/windowBackground"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <!-- AppBar superior -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/topAppBar"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Huerta"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:textColor="@android:color/black" />
+        app:title="Detalle Huerto"
+        app:navigationIcon="@drawable/ic_arrow_right"
+        app:titleCentered="true"/>
 
-    <TextView
-        android:layout_width="wrap_content"
+    <!-- Información de la planta -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Contenido en desarrollo..."
-        android:textSize="16sp"
-        android:textColor="@android:color/darker_gray"
-        android:layout_marginTop="16dp" />
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp"
+        android:layout_marginTop="16dp">
 
+        <LinearLayout
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvNombrePlanta"
+                    style="@style/TextAppearance.MaterialComponents.Headline6"
+                    android:text="Lechuga"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvNombreCientifico"
+                    style="@style/TextAppearance.MaterialComponents.Body2"
+                    android:text="Lactuca sativa"/>
+            </LinearLayout>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imgPlanta"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                app:shapeAppearanceOverlay="@style/ShapeAppearance.MaterialComponents.SmallComponent"
+                android:scaleType="centerCrop" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Ficha Detalle y fases -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="2dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="24dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvFechaSiembra"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/TextAppearance.MaterialComponents.Body2"
+                android:drawableStart="@drawable/ic_cultivos"
+                android:drawablePadding="8dp"
+                android:text="Sembrado el 20/09/2025"/>
+
+            <TextView
+                android:id="@+id/tvProximoRiego"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/TextAppearance.MaterialComponents.Body2"
+                android:textColor="@color/design_default_color_secondary"
+                android:text="💧 Próximo riego: 23/09/2025"
+                android:layout_marginTop="6dp"/>
+
+            <TextView
+                android:text="Fase de la planta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/TextAppearance.MaterialComponents.Subtitle1"
+                android:layout_marginTop="12dp"/>
+
+            <!-- Aquí se llenarán dinámicamente las etapas -->
+            <LinearLayout
+                android:id="@+id/layoutEtapas"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Botones -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnRegar"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Regar"
+            app:icon="@drawable/ic_cultivos"
+            app:iconTint="@android:color/white"
+            style="@style/Widget.MaterialComponents.Button"
+            app:backgroundTint="@color/design_default_color_secondary"/>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnEliminar"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Eliminar Cultivo"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:textColor="@color/design_default_color_secondary"
+            app:strokeColor="@color/design_default_color_secondary"
+            app:icon="@drawable/ic_cultivos"
+            app:iconTint="@color/design_default_color_secondary"
+            android:layout_marginStart="16dp"/>
+    </LinearLayout>
 </LinearLayout>
+
+
+
+
+
+
+
+    <!--<LinearLayout-->
+<!--    xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    android:orientation="vertical"-->
+<!--    android:padding="16dp"-->
+<!--    android:background="?android:attr/windowBackground"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent">-->
+
+<!--    &lt;!&ndash; Navegación superior &ndash;&gt;-->
+<!--    <com.google.android.material.appbar.MaterialToolbar-->
+<!--        android:id="@+id/topAppBar"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:title="Huerto 1"-->
+<!--        app:navigationIcon="@drawable/ic_huerta"-->
+<!--        style="@style/Widget.MaterialComponents.Toolbar.Primary" />-->
+
+<!--    <com.google.android.material.card.MaterialCardView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:cardCornerRadius="16dp"-->
+<!--        app:cardElevation="4dp"-->
+<!--        android:layout_marginTop="12dp"-->
+<!--        android:layout_marginBottom="12dp">-->
+
+<!--        <LinearLayout-->
+<!--            android:orientation="horizontal"-->
+<!--            android:padding="16dp"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content">-->
+
+<!--            <LinearLayout-->
+<!--                android:orientation="vertical"-->
+<!--                android:layout_weight="1"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content">-->
+<!--                <TextView-->
+<!--                    android:id="@+id/tvNombrePlanta"-->
+<!--                    style="@style/TextAppearance.MaterialComponents.Headline6"-->
+<!--                    android:text="Lechuga"/>-->
+<!--                <TextView-->
+<!--                    android:id="@+id/tvNombreCientifico"-->
+<!--                    style="@style/TextAppearance.MaterialComponents.Body2"-->
+<!--                    android:text="Lactuca sativa"/>-->
+<!--            </LinearLayout>-->
+<!--            <com.google.android.material.imageview.ShapeableImageView-->
+<!--                android:id="@+id/imgPlanta"-->
+<!--                android:layout_width="72dp"-->
+<!--                android:layout_height="72dp"-->
+<!--                app:shapeAppearanceOverlay="@style/ShapeAppearance.MaterialComponents.SmallComponent"-->
+<!--                android:scaleType="centerCrop" />-->
+<!--        </LinearLayout>-->
+<!--    </com.google.android.material.card.MaterialCardView>-->
+
+<!--    <com.google.android.material.card.MaterialCardView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:cardCornerRadius="16dp"-->
+<!--        app:cardElevation="2dp"-->
+<!--        android:layout_marginBottom="24dp">-->
+
+<!--        <LinearLayout-->
+<!--            android:orientation="vertical"-->
+<!--            android:padding="16dp"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content">-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/tvFechaSiembra"-->
+<!--                style="@style/TextAppearance.MaterialComponents.Body2"-->
+<!--                android:text="Sembrado el 20/09/2025"-->
+<!--                android:drawableStart="@drawable/ic_cultivos"-->
+<!--                android:drawablePadding="8dp"/>-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/tvProximoRiego"-->
+<!--                style="@style/TextAppearance.MaterialComponents.Body2"-->
+<!--                android:textColor="@color/design_default_color_secondary"-->
+<!--                android:text="💧 Próximo riego: 23/09/2025"-->
+<!--                android:layout_marginTop="6dp"/>-->
+
+<!--            <TextView-->
+<!--                android:text="Fase de la planta"-->
+<!--                style="@style/TextAppearance.MaterialComponents.Subtitle1"-->
+<!--                android:layout_marginTop="12dp"/>-->
+<!--            <LinearLayout-->
+<!--                android:id="@+id/layoutEtapas"-->
+<!--                android:orientation="vertical"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"/>-->
+<!--        </LinearLayout>-->
+<!--    </com.google.android.material.card.MaterialCardView>-->
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:gravity="center"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:layout_marginTop="8dp">-->
+<!--        <com.google.android.material.button.MaterialButton-->
+<!--            android:id="@+id/btnRegar"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:text="Regar"-->
+<!--            style="@style/Widget.MaterialComponents.Button"-->
+<!--            android:icon="@drawable/ic_cultivos"-->
+<!--            app:iconTint="@color/white"-->
+<!--            android:backgroundTint="@color/design_default_color_secondary"-->
+<!--            />-->
+
+<!--        <com.google.android.material.button.MaterialButton-->
+<!--            android:id="@+id/btnEliminar"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:text="Eliminar Cultivo"-->
+<!--            style="@style/Widget.MaterialComponents.Button.OutlinedButton"-->
+<!--            android:textColor="@color/design_default_color_secondary"-->
+<!--            app:strokeColor="@color/design_default_color_secondary"-->
+<!--            app:icon="@drawable/ic_cultivos"-->
+<!--            app:iconTint="@color/design_default_color_secondary"-->
+<!--            android:layout_marginStart="16dp"/>-->
+<!--    </LinearLayout>-->
+
+<!--</LinearLayout>-->
