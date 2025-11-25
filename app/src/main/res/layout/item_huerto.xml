@@ -1,15 +1,15 @@
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="80dp"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardCornerRadius="16dp"
-    app:cardElevation="4dp"
-    android:layout_marginVertical="8dp">
+    app:cardElevation="3dp"
+    android:layout_marginVertical="10dp">
 
     <LinearLayout
         android:orientation="horizontal"
         android:background="#F7F4FA"
-        android:padding="12dp"
+        android:padding="0dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -17,7 +17,8 @@
             android:id="@+id/imgMiniPlanta"
             android:layout_width="48dp"
             android:layout_height="48dp"
-            android:layout_marginEnd="12dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="12dp"
             app:shapeAppearanceOverlay="@style/ShapeAppearance.MaterialComponents.SmallComponent"
             android:scaleType="centerCrop" />
 
@@ -25,31 +26,33 @@
             android:orientation="vertical"
             android:layout_width="0dp"
             android:layout_weight="2"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="12dp">
 
             <TextView
                 android:id="@+id/tvNombreHuerto"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
-                android:textSize="16sp"
-                android:text="[Nombre del Huerto]"
+                android:textSize="15sp"
+                android:text="Nombre del Huerto"
+                android:textColor="@android:color/black"
                 android:maxLines="1"/>
 
             <TextView
                 android:id="@+id/tvNombrePlanta"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="[Nombre de Planta]"
-                android:textSize="14sp"
-                android:textColor="?android:textColorSecondary"
+                android:text="Nombre de Planta"
+                android:textSize="13sp"
+                android:textColor="@android:color/darker_gray"
                 android:maxLines="1"/>
         </LinearLayout>
 
-        <!-- Opcional: iconos o más info aquí -->
+        <!-- Opcional: Aquí podrías dejar más iconos/acciones si gustas, o eliminar la columna si solo quieres la imagen -->
     </LinearLayout>
 </com.google.android.material.card.MaterialCardView>
-
 
 
 

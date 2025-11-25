@@ -128,6 +128,18 @@
                       </LayoutPositions>
                     </value>
                   </entry>
+                  <entry key="detalleHuertoFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="12" />
+                            <option name="y" value="12" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
                   <entry key="detallePlagaFragment">
                     <value>
                       <LayoutPositions>
@@ -177,7 +189,7 @@
                                 <LayoutPositions />
                               </value>
                             </entry>
-                            <entry key="action_homeFragment_to_huertaFragment">
+                            <entry key="action_homeFragment_to_listaHuertosFragment">
                               <value>
                                 <LayoutPositions />
                               </value>
@@ -197,13 +209,13 @@
                       </LayoutPositions>
                     </value>
                   </entry>
-                  <entry key="huertaFragment">
+                  <entry key="listaHuertosFragment">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="256" />
-                            <option name="y" value="724" />
+                            <option name="x" value="12" />
+                            <option name="y" value="12" />
                           </Point>
                         </option>
                       </LayoutPositions>

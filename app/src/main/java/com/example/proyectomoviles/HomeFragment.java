@@ -24,7 +24,7 @@ public class HomeFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         view.findViewById(R.id.cardHuerta).setOnClickListener(v -> {
-            Navigation.findNavController(v).navigate(R.id.action_homeFragment_to_huertaFragment);
+            Navigation.findNavController(v).navigate(R.id.action_homeFragment_to_listaHuertosFragment);
         });
 
         view.findViewById(R.id.cardCalendario).setOnClickListener(v -> {

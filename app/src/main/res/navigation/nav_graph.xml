@@ -18,8 +18,8 @@
 
         <!-- Acciones de navegación -->
         <action
-            android:id="@+id/action_homeFragment_to_huertaFragment"
-            app:destination="@id/huertaFragment" />
+            android:id="@+id/action_homeFragment_to_listaHuertosFragment"
+            app:destination="@id/listaHuertosFragment" />
 
         <action
             android:id="@+id/action_homeFragment_to_calendarioFragment"
@@ -35,11 +35,33 @@
     </fragment>
 
     <!-- Fragmentos de Destino -->
+<!--    <fragment-->
+<!--        android:id="@+id/huertaFragment"-->
+<!--        android:name="com.example.proyectomoviles.HuertaFragment"-->
+<!--        android:label="Huerta"-->
+<!--        tools:layout="@layout/fragment_huerta" />-->
     <fragment
-        android:id="@+id/huertaFragment"
-        android:name="com.example.proyectomoviles.HuertaFragment"
-        android:label="Huerta"
-        tools:layout="@layout/fragment_huerta" />
+        android:id="@+id/listaHuertosFragment"
+        android:name="com.example.proyectomoviles.ListaHuertosFragment"
+        android:label="Huertos Disponibles"
+        tools:layout="@layout/fragment_lista_huertos">
+    <action
+        android:id="@+id/action_listaHuertosFragment_to_detalleHuertoFragment"
+        app:destination="@id/detalleHuertoFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/detalleHuertoFragment"
+        android:name="com.example.proyectomoviles.DetalleHuertoFragment"
+        android:label="Detalle Huerto"
+        tools:layout="@layout/fragment_detalle_huerto">
+        <argument
+            android:name="huerto"
+            app:argType="com.example.proyectomoviles.modelos.Huerto" />
+        <argument
+            android:name="planta"
+            app:argType="com.example.proyectomoviles.modelos.Planta" />
+    </fragment>
 
     <fragment
         android:id="@+id/calendarioFragment"

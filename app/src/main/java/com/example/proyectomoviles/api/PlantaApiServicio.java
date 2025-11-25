@@ -16,6 +16,9 @@ public interface PlantaApiServicio {
     @GET("/plantas-por-mes")
     Call<List<Planta>> getPlantasPorMes(@Query("mes") int mes);
 
+    @GET("/getPlantas")
+    Call<List<Planta>> obtenerPlantas();
+
 }
 
 
