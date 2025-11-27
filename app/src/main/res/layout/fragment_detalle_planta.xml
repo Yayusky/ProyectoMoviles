@@ -10,7 +10,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <!-- Card principal con imagen y contenido -->
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -24,7 +23,6 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <!-- Imagen grande arriba -->
                 <ImageView
                     android:id="@+id/imagenDetalle"
                     android:layout_width="match_parent"
@@ -32,14 +30,12 @@
                     android:scaleType="centerCrop"
                     android:contentDescription="@string/app_name" />
 
-                <!-- Contenido textual -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:padding="16dp">
 
-                    <!-- Nombre común -->
                     <TextView
                         android:id="@+id/nombreDetalle"
                         android:layout_width="wrap_content"
@@ -49,7 +45,6 @@
                         android:textSize="22sp"
                         android:textColor="#222222" />
 
-                    <!-- Nombre científico -->
                     <TextView
                         android:id="@+id/nombreCientificoDetalle"
                         android:layout_width="wrap_content"
@@ -60,7 +55,6 @@
                         android:textColor="#777777"
                         android:textStyle="italic" />
 
-                    <!-- Descripción -->
                     <TextView
                         android:id="@+id/descripcionDetalle"
                         android:layout_width="match_parent"
@@ -70,14 +64,12 @@
                         android:textSize="15sp"
                         android:textColor="#444444" />
 
-                    <!-- Separador -->
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
                         android:layout_marginTop="12dp"
                         android:background="#E0E0E0" />
 
-                    <!-- Bloque de datos resumidos -->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -144,7 +136,6 @@
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-        <!-- Botón Sembrar fijo al final -->
         <Button
             android:id="@+id/btnSembrar"
             android:layout_width="match_parent"
@@ -161,77 +152,3 @@
     </LinearLayout>
 </ScrollView>
 
-
-
-
-
-
-    <!--<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"-->
-<!--    android:layout_width="match_parent" android:layout_height="match_parent">-->
-<!--    <LinearLayout android:orientation="vertical" android:padding="16dp"-->
-<!--        android:layout_width="match_parent" android:layout_height="wrap_content">-->
-<!--        <ImageView-->
-<!--            android:id="@+id/imagenDetalle"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="180dp"-->
-<!--            android:scaleType="centerCrop"/>-->
-<!--        <TextView-->
-<!--            android:id="@+id/nombreDetalle"-->
-<!--            android:textStyle="bold"-->
-<!--            android:textSize="22sp"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_width="wrap_content"/>-->
-
-<!--        <TextView-->
-<!--            android:id="@+id/nombreCientificoDetalle"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:textSize="18sp"-->
-<!--            android:textColor="#888"/>-->
-
-
-<!--        <TextView-->
-<!--            android:id="@+id/descripcionDetalle"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:paddingTop="4dp"-->
-<!--            android:textSize="16sp"/>-->
-
-<!--        <TextView-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:id="@+id/tipoPlantaDetalle"/>-->
-
-<!--        <TextView-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:id="@+id/climaDetalle"/>-->
-
-<!--        <TextView-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:id="@+id/sueloDetalle"/>-->
-
-<!--        <TextView-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:id="@+id/tiempoVidaDetalle"/>-->
-
-<!--        <TextView-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:id="@+id/mesesSiembraDetalle"/>-->
-
-<!--        <TextView-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:id="@+id/riegoDetalle" android:paddingBottom="12dp"/>-->
-
-<!--        <Button android:id="@+id/btnSembrar"-->
-<!--            android:text="Sembrar"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:backgroundTint="#68B165"-->
-<!--            android:textColor="#fff"/>-->
-<!--    </LinearLayout>-->
-<!--</ScrollView>-->

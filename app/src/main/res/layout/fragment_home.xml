@@ -215,7 +215,7 @@
             <ImageView
                 android:layout_width="32dp"
                 android:layout_height="32dp"
-                android:src="@drawable/ic_consejo"/> <!-- un ícono tipo bombilla/hoja -->/>
+                android:src="@drawable/ic_consejo"/>
 
             <TextView
                 android:id="@+id/tvConsejo"

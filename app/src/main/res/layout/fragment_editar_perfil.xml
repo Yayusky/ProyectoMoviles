@@ -8,8 +8,6 @@
     android:background="#F7F7F7">
 
 
-
-    <!-- Texto Cambiar Foto -->
     <TextView
         android:id="@+id/txtCambiarFoto"
         android:layout_width="wrap_content"
@@ -26,7 +24,6 @@
 
         />
 
-    <!-- Campo Nombre -->
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/inputNombre"
         android:layout_width="0dp"
@@ -44,7 +41,6 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
-    <!-- Campo Email -->
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/inputEmail"
         android:layout_width="0dp"
@@ -64,9 +60,6 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
-
-
-    <!-- Botón Guardar -->
     <Button
         android:id="@+id/btnGuardar"
         android:layout_width="0dp"

@@ -10,11 +10,8 @@
         android:layout_gravity="center_horizontal"
         android:layout_height="wrap_content"
         android:background="@drawable/border"
-
-
         >
 
-        <!-- Imagen de la plaga -->
         <ImageView
             android:id="@+id/imagePlaga"
             android:layout_width="match_parent"
@@ -22,7 +19,6 @@
             android:scaleType="centerCrop"
             android:layout_marginBottom="8dp" />
 
-        <!-- Nombre común -->
         <TextView
             android:id="@+id/textTituloPlaga"
             android:layout_marginTop="10dp"
@@ -35,7 +31,6 @@
             android:textColor="#222"
             android:justificationMode="inter_word"/>
 
-        <!-- Nombre científico -->
         <TextView
             android:id="@+id/textNombreCientifico"
             android:layout_marginTop="10dp"
@@ -47,7 +42,6 @@
             android:layout_marginBottom="8dp"
             android:justificationMode="inter_word" />
 
-        <!-- Descripción corta -->
         <TextView
             android:id="@+id/textDescripcionCorta"
             android:layout_width="wrap_content"
@@ -60,10 +54,6 @@
             android:justificationMode="inter_word"/>
 
 
-        <!-- Descripción larga -->
-
-
-        <!-- Título Soluciones -->
         <TextView
             android:id="@+id/textTituloSoluciones"
             android:layout_width="wrap_content"
@@ -76,7 +66,6 @@
             android:textColor="#222"
             android:justificationMode="inter_word"/>
 
-        <!-- Contenedor de remedios -->
         <LinearLayout
             android:id="@+id/layoutRemedios"
             android:layout_marginTop="10dp"

@@ -5,9 +5,6 @@
     android:id="@+id/nav_graph"
     app:startDestination="@id/loginFragment">
 
-<!--    Fragmento Lista Plagas-->
-
-
 
     <!-- Fragmento Principal - Menú -->
     <fragment
@@ -114,67 +111,43 @@
             app:argType="com.example.proyectomoviles.modelos.Plaga" />
     </fragment>
 
-    <!-- Fragmento - Editar perfil -->
     <fragment
         android:id="@+id/editarPerfil"
         android:name="com.example.proyectomoviles.EditarPerfilFragment"
         android:label="Editar Perfil"
         tools:layout="@layout/fragment_editar_perfil"/>
 
-    <!-- Fragmento - Extra (el que quieras, vacío o placeholder) -->
     <fragment
         android:id="@+id/cultivos"
         android:name="com.example.proyectomoviles.CultivosFragment"
         android:label="Extra"
         tools:layout="@layout/fragment_tipo_cultivos" />
 
-
-
-
-
-
-
-<!--    <fragment-->
-<!--        android:id="@+id/loginFragment"-->
-<!--        android:name="com.example.proyectomoviles.ui.login.LoginFragment"-->
-<!--        android:label="fragment_login"-->
-<!--        tools:layout="@layout/fragment_login" />-->
-
-
-
-    <!-- Fragmento de Login -->
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.example.proyectomoviles.LoginFragment"
         android:label="Iniciar Sesión"
         tools:layout="@layout/fragment_login">
 
-        <!-- Acción: Ir al registro -->
         <action
             android:id="@+id/action_loginFragment_to_registroUsuarioFragment"
             app:destination="@id/registroUsuarioFragment" />
 
-        <!-- Acción: Ir al Home tras login -->
         <action
             android:id="@+id/action_loginFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
     </fragment>
 
-    <!-- Fragmento de Registro -->
     <fragment
         android:id="@+id/registroUsuarioFragment"
         android:name="com.example.proyectomoviles.RegistroUsuarioFragment"
         android:label="Registro de Usuario"
         tools:layout="@layout/fragment_registro_usuario">
 
-        <!-- Acción: Ir al login tras registro -->
         <action
             android:id="@+id/action_registroUsuarioFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
     </fragment>
-
-
-
 
 
 </navigation>

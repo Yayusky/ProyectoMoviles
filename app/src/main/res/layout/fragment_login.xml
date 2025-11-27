@@ -7,7 +7,6 @@
     android:layout_height="match_parent"
     android:padding="24dp">
 
-    <!-- Logo o animación superior -->
     <ImageView
         android:id="@+id/imageLogo"
         android:layout_width="180dp"
@@ -53,17 +52,6 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
-<!--    <EditText-->
-<!--        android:id="@+id/editEmail"-->
-<!--        android:hint="Email/Number"-->
-<!--        android:inputType="textEmailAddress"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginBottom="16dp"-->
-<!--        android:autofillHints="emailAddress"-->
-<!--        />-->
-<!--    android:background=""-->
-
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -79,17 +67,6 @@
         android:autofillHints="emailAddress"
         />
     </com.google.android.material.textfield.TextInputLayout>
-
-    <!--    <EditText-->
-<!--        android:id="@+id/editPassword"-->
-<!--        android:hint="Password"-->
-<!--        android:inputType="textPassword"-->
-<!--        android:autofillHints="password"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginBottom="16dp"/>-->
-<!--        android:background=""-->
-
 
     <Button
         android:id="@+id/btnLogin"
@@ -114,7 +91,5 @@
         android:focusable="true"
         android:textStyle="bold"
         android:autoLink="none"/>
-
-
 
 </LinearLayout>
