@@ -27,6 +27,7 @@ import retrofit2.Response;
 public class ListaHuertosFragment extends Fragment {
     private RecyclerView recyclerHuertos;
     private TextView tvSinHuertas;
+
     private AdaptadorHuerto adaptadorHuerto;
     private final List<Huerto> listaHuertos = new ArrayList<>();
     private final List<Planta> listaPlantas = new ArrayList<>();
@@ -39,9 +40,10 @@ public class ListaHuertosFragment extends Fragment {
         recyclerHuertos = view.findViewById(R.id.recyclerHuertos);
         tvSinHuertas = view.findViewById(R.id.tvSinHuertas);
 
+
+
         recyclerHuertos.setLayoutManager(new LinearLayoutManager(getContext()));
         adaptadorHuerto = new AdaptadorHuerto(listaHuertos, listaPlantas, huerto -> {
-            // Al hacer click en una card, navega al detalle o realiza la acción que desees.
         });
         recyclerHuertos.setAdapter(adaptadorHuerto);
 
@@ -51,7 +53,6 @@ public class ListaHuertosFragment extends Fragment {
     }
 
     private void cargarDatos() {
-        // 1. Obtiene usuarioId de preferencias
         SharedPreferences prefs = requireActivity().getSharedPreferences("usuarioPrefs", Context.MODE_PRIVATE);
         String usuarioId = prefs.getString("usuarioId", null);
         if (usuarioId == null) {
@@ -59,7 +60,6 @@ public class ListaHuertosFragment extends Fragment {
             return;
         }
 
-        // 2. Carga plantas primero, luego huertos (para poder cruzar info)
         RetrofitCliente.getPlantaService().obtenerPlantas().enqueue(new Callback<List<Planta>>() {
             @Override
             public void onResponse(Call<List<Planta>> call, Response<List<Planta>> response) {

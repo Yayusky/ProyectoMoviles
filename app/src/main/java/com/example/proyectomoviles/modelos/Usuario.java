@@ -26,4 +26,24 @@ public class Usuario implements Serializable {
 
     public String getCreated_at() { return created_at;}
     public void setCreated_at(String created_at) { this.created_at = created_at;}
+
+
+    public static class UsuarioUpdate {
+        private String login;
+        private String pa$$;
+
+        public UsuarioUpdate(String login, String pa$$) {
+            this.login = login;
+            this.pa$$ = pa$$;
+        }
+    }
+
+    public static class UsuarioRespuesta {
+        private String message;
+        private Usuario user;
+
+        public String getMessage() { return message; }
+        public Usuario getUser() { return user; }
+    }
+
 }

@@ -1,20 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white">
+    android:background="#ffff">
 
+    <!-- Contenedor para tus fragments principales -->
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/nav_host_fragment"
         android:name="androidx.navigation.fragment.NavHostFragment"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:navGraph="@navigation/nav_graph"
         app:defaultNavHost="true"
-        app:navGraph="@navigation/nav_graph" />
+        android:layout_above="@id/bottom_navigation" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+<!--    &lt;!&ndash; Bottom Navigation, visible sólo después de login &ndash;&gt;-->
+<!--    <com.google.android.material.bottomnavigation.BottomNavigationView-->
+<!--        android:id="@+id/bottom_navigation"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="70dp"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_marginBottom="2dp"-->
+
+<!--        app:itemIconTint="@color/black"-->
+<!--        app:itemRippleColor="@color/design_default_color_secondary"-->
+<!--        app:itemTextColor="@color/black"-->
+<!--        app:labelVisibilityMode="labeled"-->
+<!--        app:menu="@menu/bottom_nav_menu" />-->
+
+    <!-- Nuevo contenedor de botones redondos, mantiene el id bottom_navigation -->
+    <LinearLayout
+        android:id="@+id/bottom_navigation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:background="#00000000">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btn_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_home"
+            app:backgroundTint="#6A9D5F"
+            app:tint="@android:color/white"
+            android:layout_margin="8dp" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btn_editar_perfil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_cuenta"
+            app:backgroundTint="#6A9D5F"
+            app:tint="@android:color/white"
+            android:layout_margin="8dp" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btn_cultivos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_salir"
+            app:backgroundTint="#6A9D5F"
+            app:tint="@android:color/white"
+            android:layout_margin="8dp" />
+
+    </LinearLayout>
+
+</RelativeLayout>
+

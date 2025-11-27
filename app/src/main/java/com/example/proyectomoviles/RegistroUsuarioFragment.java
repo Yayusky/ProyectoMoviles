@@ -26,7 +26,7 @@ import retrofit2.Response;
 
 
 public class RegistroUsuarioFragment extends Fragment {
-    private EditText editName, editEmail, editPassword;
+    private EditText editNombre, editEmail, editPass;
     private Button btnSignUp;
 
     @Nullable
@@ -35,15 +35,15 @@ public class RegistroUsuarioFragment extends Fragment {
                              @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_registro_usuario, container, false);
 
-        editName = view.findViewById(R.id.editName);
+        editNombre = view.findViewById(R.id.editName);
         editEmail = view.findViewById(R.id.editEmail);
-        editPassword = view.findViewById(R.id.editPassword);
+        editPass = view.findViewById(R.id.editPassword);
         btnSignUp = view.findViewById(R.id.btnSignUp);
 
         btnSignUp.setOnClickListener(v -> {
-            String name = editName.getText().toString();
+            String name = editNombre.getText().toString();
             String email = editEmail.getText().toString();
-            String password = editPassword.getText().toString();
+            String password = editPass.getText().toString();
 
             Usuario usuario = new Usuario();
             usuario.setName(name);
@@ -58,10 +58,8 @@ public class RegistroUsuarioFragment extends Fragment {
                 public void onResponse(Call<Map<String, Object>> call, Response<Map<String, Object>> response) {
                     if (response.isSuccessful()) {
                         Toast.makeText(getContext(), "Registro exitoso", Toast.LENGTH_SHORT).show();
-                        // Aquí navega a LoginFragment, Home o donde quieras
                         NavHostFragment.findNavController(RegistroUsuarioFragment.this)
                                 .navigate(R.id.action_registroUsuarioFragment_to_loginFragment);
-
 
                     } else {
                         Toast.makeText(getContext(), "Registro fallido: " + response.message(), Toast.LENGTH_SHORT).show();

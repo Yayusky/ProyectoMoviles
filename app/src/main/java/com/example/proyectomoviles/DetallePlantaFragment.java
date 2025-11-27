@@ -45,7 +45,7 @@ public class DetallePlantaFragment extends Fragment {
         suelo.setText("Tipo de Suelo: " + planta.getSuelo());
         tiempoVida.setText("Tiempo aprox. de vida: " +
                 (planta.getFaseInicial() + planta.getFaseVegetativa() + planta.getFaseReproductiva()) + " días");
-        mesesSiembra.setText("Meses ideales para sembrar: " + mesesComoTexto(planta.getMesesSiembra()));
+        mesesSiembra.setText("Meses ideales para sembrar: " + meses(planta.getMesesSiembra()));
         riego.setText("Riego: " + planta.getNumRiegoXSemana() + " veces por semana");
 
         btnSembrar.setOnClickListener(v -> {
@@ -59,7 +59,7 @@ public class DetallePlantaFragment extends Fragment {
         return view;
     }
 
-    private String mesesComoTexto(List<Integer> meses) {
+    private String meses(List<Integer> meses) {
         String[] nombresMes = {
                 "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
                 "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"

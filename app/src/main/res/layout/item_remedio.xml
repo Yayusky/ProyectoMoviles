@@ -3,15 +3,17 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:padding="8dp"
-    android:background="#f2f2f2"
+    android:background="#ffff"
     android:layout_marginBottom="12dp"
-    android:elevation="2dp">
+    android:elevation="2dp"
+    >
 
     <TextView
         android:id="@+id/nombreRemedio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textStyle="bold"
+        android:text="asdasdasdasda"
         android:textSize="16sp"
         android:textColor="#222"
         android:layout_marginBottom="4dp"
@@ -19,26 +21,34 @@
 
     <ImageView
         android:id="@+id/imgRemedio"
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="140dp"
         android:scaleType="centerCrop"
+        android:background="@drawable/ic_launcher_background"
         android:layout_marginBottom="6dp"
         />
 
     <TextView
+        android:layout_marginTop="10dp"
         android:id="@+id/descripcionRemedio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="14sp"
+        android:justificationMode="inter_word"
+        android:text="asdasdasdasda"
         android:textColor="#333"
         android:layout_marginBottom="6dp"
         />
 
     <TextView
         android:id="@+id/ingredientesRemedio"
+        android:layout_marginTop="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="13sp"
+        android:textSize="14sp"
+        android:justificationMode="inter_word"
+        android:text="asdasdasdasda"
         android:textColor="#333"
         android:textStyle="bold"
         android:layout_marginBottom="4dp"
@@ -46,9 +56,12 @@
 
     <TextView
         android:id="@+id/preparativo"
+        android:layout_marginTop="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="13sp"
+        android:textSize="14sp"
+        android:justificationMode="inter_word"
+        android:text="asdasdasdasda"
         android:textColor="#333"
         android:textStyle="bold"
         android:layout_marginBottom="4dp"
@@ -56,10 +69,13 @@
 
     <TextView
         android:id="@+id/aplicacionRemedio"
+        android:layout_marginTop="10dp"
+        android:justificationMode="inter_word"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textStyle="bold"
-        android:textSize="13sp"
+        android:text="asdasdasdasda"
+        android:textSize="14sp"
         android:textColor="#333"
         />
 </LinearLayout>

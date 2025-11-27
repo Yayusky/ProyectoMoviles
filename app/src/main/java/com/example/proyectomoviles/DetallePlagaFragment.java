@@ -32,19 +32,14 @@ public class DetallePlagaFragment extends Fragment {
         TextView tituloPlaga = view.findViewById(R.id.textTituloPlaga);
         TextView nombreCientifico = view.findViewById(R.id.textNombreCientifico);
         TextView descripcionCorta = view.findViewById(R.id.textDescripcionCorta);
-        TextView descripcionLarga = view.findViewById(R.id.textDescripcionLarga);
         LinearLayout layoutRemedios = view.findViewById(R.id.layoutRemedios);
 
-        // Imagen principal
         Picasso.get().load(plaga.getImg()).into(imagePlaga);
-
-        // Titulos y descripciones
         tituloPlaga.setText(plaga.getNombreP());
         nombreCientifico.setText(plaga.getNombreCien());
         descripcionCorta.setText(plaga.getDefinicion());
-        descripcionLarga.setText(""); // Completa si tienes una descripción larga adicional
 
-        // Remedios
+
         if(plaga.getRemedio() != null && !plaga.getRemedio().isEmpty()){
             for(RemedioPlaga rp : plaga.getRemedio()){
                 View remedioView = inflater.inflate(R.layout.item_remedio, layoutRemedios, false);

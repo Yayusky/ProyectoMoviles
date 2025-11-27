@@ -9,6 +9,8 @@ import java.util.List;
 public class Huerto implements Serializable {
     @SerializedName("usuario_id")
     private String UsuarioId;
+    @SerializedName("_id")
+    private String HuertoId;
     private String nombre;
     private String fechaRegistro;
     private List<PlantaSembrada> plantasSembradas = new ArrayList<>();
@@ -18,6 +20,9 @@ public class Huerto implements Serializable {
     private boolean activo = true;
 
     // Getters y setters
+
+    public String getHuertoId() { return HuertoId; }
+    public void setHuertoId(String id) { this.HuertoId = id; }
     public String getUsuarioId() { return UsuarioId; }
     public void setUsuarioId(String id) { this.UsuarioId = id; }
     public String getNombre() { return nombre; }
@@ -62,6 +67,15 @@ public class Huerto implements Serializable {
         private int cantidad;
         private String etapaActual;
         private String notas;
+        private String tipo;
+
+        public String getTipo() {
+            return tipo;
+        }
+
+        public void setTipo(String tipo) {
+            this.tipo = tipo;
+        }
 
         public String getPlantaId() { return plantaId; }
         public void setPlantaId(String plantaId) { this.plantaId = plantaId; }

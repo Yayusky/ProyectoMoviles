@@ -112,8 +112,8 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="256" />
-                            <option name="y" value="1080" />
+                            <option name="x" value="322" />
+                            <option name="y" value="532" />
                           </Point>
                         </option>
                         <option name="myPositions">
@@ -128,13 +128,25 @@
                       </LayoutPositions>
                     </value>
                   </entry>
+                  <entry key="cultivos">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="604" />
+                            <option name="y" value="351" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
                   <entry key="detalleHuertoFragment">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="12" />
-                            <option name="y" value="12" />
+                            <option name="x" value="586" />
+                            <option name="y" value="-387" />
                           </Point>
                         </option>
                       </LayoutPositions>
@@ -145,8 +157,8 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="12" />
-                            <option name="y" value="12" />
+                            <option name="x" value="625" />
+                            <option name="y" value="-15" />
                           </Point>
                         </option>
                       </LayoutPositions>
@@ -157,8 +169,8 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="12" />
-                            <option name="y" value="12" />
+                            <option name="x" value="726" />
+                            <option name="y" value="833" />
                           </Point>
                         </option>
                         <option name="myPositions">
@@ -173,13 +185,25 @@
                       </LayoutPositions>
                     </value>
                   </entry>
-                  <entry key="homeFragment">
+                  <entry key="editarPerfil">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
                             <option name="x" value="12" />
-                            <option name="y" value="88" />
+                            <option name="y" value="12" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="homeFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="44" />
+                            <option name="y" value="11" />
                           </Point>
                         </option>
                         <option name="myPositions">
@@ -209,7 +233,7 @@
                       </LayoutPositions>
                     </value>
                   </entry>
-                  <entry key="listaHuertosFragment">
+                  <entry key="huertaFragment">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
@@ -221,13 +245,34 @@
                       </LayoutPositions>
                     </value>
                   </entry>
+                  <entry key="listaHuertosFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="340" />
+                            <option name="y" value="-382" />
+                          </Point>
+                        </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_listaHuertosFragment_to_detalleHuertoFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
                   <entry key="loginFragment">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="256" />
-                            <option name="y" value="12" />
+                            <option name="x" value="34" />
+                            <option name="y" value="-327" />
                           </Point>
                         </option>
                         <option name="myPositions">
@@ -252,8 +297,8 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="256" />
-                            <option name="y" value="12" />
+                            <option name="x" value="410" />
+                            <option name="y" value="-6" />
                           </Point>
                         </option>
                       </LayoutPositions>
@@ -264,8 +309,8 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="12" />
-                            <option name="y" value="12" />
+                            <option name="x" value="968" />
+                            <option name="y" value="819" />
                           </Point>
                         </option>
                       </LayoutPositions>
@@ -276,8 +321,8 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="12" />
-                            <option name="y" value="12" />
+                            <option name="x" value="30" />
+                            <option name="y" value="-642" />
                           </Point>
                         </option>
                         <option name="myPositions">
@@ -288,18 +333,6 @@
                               </value>
                             </entry>
                           </map>
-                        </option>
-                      </LayoutPositions>
-                    </value>
-                  </entry>
-                  <entry key="tiposCultivoFragment">
-                    <value>
-                      <LayoutPositions>
-                        <option name="myPosition">
-                          <Point>
-                            <option name="x" value="256" />
-                            <option name="y" value="368" />
-                          </Point>
                         </option>
                       </LayoutPositions>
                     </value>

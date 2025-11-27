@@ -1,69 +1,237 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
-    <LinearLayout android:orientation="vertical" android:padding="16dp"
-        android:layout_width="match_parent" android:layout_height="wrap_content">
-        <ImageView
-            android:id="@+id/imagenDetalle"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#F7F7F7">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Card principal con imagen y contenido -->
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="180dp"
-            android:scaleType="centerCrop"/>
-        <TextView
-            android:id="@+id/nombreDetalle"
-            android:textStyle="bold"
-            android:textSize="22sp"
             android:layout_height="wrap_content"
-            android:layout_width="wrap_content"/>
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="18dp"
+            app:cardElevation="4dp"
+            app:cardUseCompatPadding="true">
 
-        <TextView
-            android:id="@+id/nombreCientificoDetalle"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Imagen grande arriba -->
+                <ImageView
+                    android:id="@+id/imagenDetalle"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="@string/app_name" />
+
+                <!-- Contenido textual -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <!-- Nombre común -->
+                    <TextView
+                        android:id="@+id/nombreDetalle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nombre de la planta"
+                        android:textStyle="bold"
+                        android:textSize="22sp"
+                        android:textColor="#222222" />
+
+                    <!-- Nombre científico -->
+                    <TextView
+                        android:id="@+id/nombreCientificoDetalle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="Nombre científico"
+                        android:textSize="16sp"
+                        android:textColor="#777777"
+                        android:textStyle="italic" />
+
+                    <!-- Descripción -->
+                    <TextView
+                        android:id="@+id/descripcionDetalle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Descripción de la planta."
+                        android:textSize="15sp"
+                        android:textColor="#444444" />
+
+                    <!-- Separador -->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="12dp"
+                        android:background="#E0E0E0" />
+
+                    <!-- Bloque de datos resumidos -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tipoPlantaDetalle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Tipo: Hortaliza"
+                            android:textSize="14sp"
+                            android:textColor="#555555"
+                            android:layout_marginTop="2dp" />
+
+                        <TextView
+                            android:id="@+id/climaDetalle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Clima: Templado"
+                            android:textSize="14sp"
+                            android:textColor="#555555"
+                            android:layout_marginTop="2dp" />
+
+                        <TextView
+                            android:id="@+id/sueloDetalle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Suelo: Franco"
+                            android:textSize="14sp"
+                            android:textColor="#555555"
+                            android:layout_marginTop="2dp" />
+
+                        <TextView
+                            android:id="@+id/tiempoVidaDetalle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Tiempo de vida: 90 días"
+                            android:textSize="14sp"
+                            android:textColor="#555555"
+                            android:layout_marginTop="2dp" />
+
+                        <TextView
+                            android:id="@+id/mesesSiembraDetalle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Meses de siembra: Ene, Feb, Mar"
+                            android:textSize="14sp"
+                            android:textColor="#555555"
+                            android:layout_marginTop="2dp" />
+
+                        <TextView
+                            android:id="@+id/riegoDetalle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Riego: 2 veces por semana"
+                            android:textSize="14sp"
+                            android:textColor="#555555"
+                            android:layout_marginTop="2dp"
+                            android:paddingBottom="4dp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Botón Sembrar fijo al final -->
+        <Button
+            android:id="@+id/btnSembrar"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:textSize="18sp"
-            android:textColor="#888"/>
-
-
-        <TextView
-            android:id="@+id/descripcionDetalle"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:paddingTop="4dp"
-            android:textSize="16sp"/>
-
-        <TextView
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:id="@+id/tipoPlantaDetalle"/>
-
-        <TextView
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:id="@+id/climaDetalle"/>
-
-        <TextView
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:id="@+id/sueloDetalle"/>
-
-        <TextView
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:id="@+id/tiempoVidaDetalle"/>
-
-        <TextView
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:id="@+id/mesesSiembraDetalle"/>
-
-        <TextView
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:id="@+id/riegoDetalle" android:paddingBottom="12dp"/>
-
-        <Button android:id="@+id/btnSembrar"
             android:text="Sembrar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:textSize="16sp"
             android:backgroundTint="#68B165"
-            android:textColor="#fff"/>
+            android:textColor="@android:color/white"
+            android:paddingVertical="10dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="8dp" />
+
     </LinearLayout>
 </ScrollView>
+
+
+
+
+
+
+    <!--<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    android:layout_width="match_parent" android:layout_height="match_parent">-->
+<!--    <LinearLayout android:orientation="vertical" android:padding="16dp"-->
+<!--        android:layout_width="match_parent" android:layout_height="wrap_content">-->
+<!--        <ImageView-->
+<!--            android:id="@+id/imagenDetalle"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="180dp"-->
+<!--            android:scaleType="centerCrop"/>-->
+<!--        <TextView-->
+<!--            android:id="@+id/nombreDetalle"-->
+<!--            android:textStyle="bold"-->
+<!--            android:textSize="22sp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_width="wrap_content"/>-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/nombreCientificoDetalle"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:textSize="18sp"-->
+<!--            android:textColor="#888"/>-->
+
+
+<!--        <TextView-->
+<!--            android:id="@+id/descripcionDetalle"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:paddingTop="4dp"-->
+<!--            android:textSize="16sp"/>-->
+
+<!--        <TextView-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:id="@+id/tipoPlantaDetalle"/>-->
+
+<!--        <TextView-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:id="@+id/climaDetalle"/>-->
+
+<!--        <TextView-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:id="@+id/sueloDetalle"/>-->
+
+<!--        <TextView-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:id="@+id/tiempoVidaDetalle"/>-->
+
+<!--        <TextView-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:id="@+id/mesesSiembraDetalle"/>-->
+
+<!--        <TextView-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:id="@+id/riegoDetalle" android:paddingBottom="12dp"/>-->
+
+<!--        <Button android:id="@+id/btnSembrar"-->
+<!--            android:text="Sembrar"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:backgroundTint="#68B165"-->
+<!--            android:textColor="#fff"/>-->
+<!--    </LinearLayout>-->
+<!--</ScrollView>-->

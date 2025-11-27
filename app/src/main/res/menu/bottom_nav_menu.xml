@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/homeFragment"
+        android:icon="@drawable/ic_cultivos"
+        android:title="Inicio" />
+
+    <item
+        android:id="@+id/editarPerfil"
+        android:icon="@drawable/ic_calendario"
+        android:title="Editar Perfil" />
+
+    <item
+        android:id="@+id/cultivos"
+        android:icon="@drawable/ic_cultivos"
+        android:title="Extra" />
+
+</menu>
+
+
+
+<!--<menu xmlns:android="http://schemas.android.com/apk/res/android">-->
+<!--    <item-->
+<!--        android:id="@+id/nav_home"-->
+<!--        android:icon="@drawable/ic_cultivos"-->
+<!--        android:title="Home" />-->
+<!--    <item-->
+<!--        android:id="@+id/nav_edit_profile"-->
+<!--        android:icon="@drawable/ic_huerta"-->
+<!--        android:title="Editar perfil" />-->
+<!--    <item-->
+<!--        android:id="@+id/nav_extra"-->
+<!--        android:icon="@drawable/ic_calendario"-->
+<!--        android:title="Extra" />-->
+<!--</menu>-->

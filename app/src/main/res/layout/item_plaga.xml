@@ -25,7 +25,7 @@
             android:layout_marginBottom="10dp"
 
             android:scaleType="centerCrop"
-            android:background="#F5F5F5"
+            android:background="@drawable/ic_launcher_background"
             android:contentDescription="Imagen de la plaga" />
 
         <!-- Contenido textual -->
@@ -40,7 +40,7 @@
                 android:id="@+id/textTituloPlaga"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text=""
+                android:text="dsfadsfasdfsdaf"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:textColor="@android:color/black" />
@@ -50,28 +50,28 @@
                 android:id="@+id/textNombreCientifico"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text=""
+                android:text="sdfdsafdsfasd"
                 android:textSize="14sp"
-                android:textColor="@color/blue_dark"
+                android:textColor="@color/black"
                 android:textStyle="italic"
                 android:layout_marginTop="4dp" />
 
             <!-- Línea divisoria -->
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@android:color/darker_gray"
-                android:layout_marginTop="12dp"
-                android:layout_marginBottom="12dp" />
+<!--            <View-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="1dp"-->
+<!--                android:background="@android:color/darker_gray"-->
+<!--                android:layout_marginTop="12dp"-->
+<!--                android:layout_marginBottom="12dp" />-->
 
             <!-- Descripción de la plaga -->
             <TextView
                 android:id="@+id/textDescripcionPlaga"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text=""
+                android:text="asdasdasdasd"
                 android:textSize="14sp"
-                android:textColor="@android:color/darker_gray"
+                android:textColor="#757575"
                 android:maxLines="3"
                 android:ellipsize="end"
                 android:lineSpacingExtra="4dp" />
@@ -81,9 +81,9 @@
                 android:id="@+id/textRemediosDisponibles"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text=""
+                android:text="asdasdasdas"
                 android:textSize="12sp"
-                android:textColor="@color/green_dark"
+                android:textColor="@color/black"
                 android:layout_marginTop="12dp" />
 
         </LinearLayout>

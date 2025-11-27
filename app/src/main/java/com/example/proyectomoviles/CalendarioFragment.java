@@ -34,7 +34,7 @@ import retrofit2.Response;
 
 public class CalendarioFragment extends Fragment {
     private RecyclerView recyclerView;
-    private AdaptadorPlantas adapter;
+    private AdaptadorPlantas adaptador;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -42,10 +42,10 @@ public class CalendarioFragment extends Fragment {
 
         recyclerView = view.findViewById(R.id.recyclerPlantas);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        adapter = new AdaptadorPlantas();
-        recyclerView.setAdapter(adapter);
+        adaptador = new AdaptadorPlantas();
+        recyclerView.setAdapter(adaptador);
 
-        adapter.setOnItemClickListener((planta, itemView) -> {
+        adaptador.setOnItemClickListener((planta, itemView) -> {
             Bundle bundle = new Bundle();
             bundle.putSerializable("planta", planta);
 
@@ -68,12 +68,11 @@ public class CalendarioFragment extends Fragment {
             @Override
             public void onResponse(Call<List<Planta>> call, Response<List<Planta>> response) {
                 if (response.isSuccessful() && response.body() != null) {
-                    adapter.setPlantas(response.body());
+                    adaptador.setPlantas(response.body());
                 }
             }
             @Override
             public void onFailure(Call<List<Planta>> call, Throwable t) {
-                // Manejo de error
             }
         });
     }

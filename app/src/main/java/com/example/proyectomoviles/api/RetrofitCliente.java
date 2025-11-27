@@ -35,6 +35,9 @@ public class RetrofitCliente {
     public static UsuarioApiServicio getUsuarioService() {
         return obtener().create(UsuarioApiServicio.class);
     }
+    public static EstadisticasApiServicio getEstadisticasService() {
+        return obtener().create(EstadisticasApiServicio.class);
+    }
 
 
 

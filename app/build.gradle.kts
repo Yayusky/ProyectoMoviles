@@ -73,6 +73,9 @@ dependencies {
 
     implementation("androidx.cardview:cardview:1.0.0")
 
+    //Graficas 
+    implementation("com.github.PhilJay:MPAndroidChart:v3.1.0")
+
     //Implementacion de volley
     //implementation("com.android.volley:volley:1.1.1")
 

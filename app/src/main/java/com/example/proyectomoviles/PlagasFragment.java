@@ -27,7 +27,7 @@ public class PlagasFragment extends Fragment {
 
     private RecyclerView recyclerViewPlagas;
     private ProgressBar progressBarPlagas;
-    private TextView textError;
+    private TextView tvError;
     private AdaptadorPlagas adaptadorPlagas;
     private List<Plaga> listaPlagas = new ArrayList<>();
 
@@ -52,7 +52,7 @@ public class PlagasFragment extends Fragment {
     private void inicializarVistas(View view) {
         recyclerViewPlagas = view.findViewById(R.id.recyclerViewPlagas);
         progressBarPlagas = view.findViewById(R.id.progressBar);
-        textError = view.findViewById(R.id.textError);
+        tvError = view.findViewById(R.id.textError);
     }
 
     private void configurarRecyclerView() {
@@ -78,7 +78,6 @@ public class PlagasFragment extends Fragment {
             @Override
             public void onResponse(Call<List<Plaga>> call, Response<List<Plaga>> response) {
                 mostrarCargando(false);
-
                 if (response.isSuccessful() && response.body() != null) {
                     listaPlagas.clear();
                     listaPlagas.addAll(response.body());
@@ -106,19 +105,19 @@ public class PlagasFragment extends Fragment {
         progressBarPlagas.setVisibility(mostrar ? View.VISIBLE : View.GONE);
         if (mostrar) {
             recyclerViewPlagas.setVisibility(View.GONE);
-            textError.setVisibility(View.GONE);
+            tvError.setVisibility(View.GONE);
         }
     }
 
     private void mostrarLista() {
         recyclerViewPlagas.setVisibility(View.VISIBLE);
-        textError.setVisibility(View.GONE);
+        tvError.setVisibility(View.GONE);
         progressBarPlagas.setVisibility(View.GONE);
     }
 
     private void mostrarError(String mensaje) {
-        textError.setText(mensaje);
-        textError.setVisibility(View.VISIBLE);
+        tvError.setText(mensaje);
+        tvError.setVisibility(View.VISIBLE);
         recyclerViewPlagas.setVisibility(View.GONE);
         progressBarPlagas.setVisibility(View.GONE);
     }

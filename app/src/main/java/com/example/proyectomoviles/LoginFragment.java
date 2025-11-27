@@ -30,7 +30,7 @@ import retrofit2.Response;
 
 
 public class LoginFragment extends Fragment {
-    private EditText editEmail, editPassword;
+    private EditText editarEmail, editarPass;
     private Button btnLogin;
 
     private TextView btnRegistro;
@@ -41,8 +41,8 @@ public class LoginFragment extends Fragment {
                              @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_login, container, false);
 
-        editEmail = view.findViewById(R.id.editEmail);
-        editPassword = view.findViewById(R.id.editPassword);
+        editarEmail = view.findViewById(R.id.editEmail);
+        editarPass = view.findViewById(R.id.editPassword);
         btnLogin = view.findViewById(R.id.btnLogin);
         btnRegistro = view.findViewById(R.id.textSignUp);
 
@@ -51,12 +51,11 @@ public class LoginFragment extends Fragment {
                     .navigate(R.id.action_loginFragment_to_registroUsuarioFragment);
         });
 
-
         btnLogin.setOnClickListener(v -> {
-            String email = editEmail.getText().toString();
-            String password = editPassword.getText().toString();
+            String email = editarEmail.getText().toString();
+            String pass = editarPass.getText().toString();
 
-            if (email.isEmpty() || password.isEmpty()) {
+            if (email.isEmpty() || pass.isEmpty()) {
                 Toast.makeText(getContext(), "Completa correo y contraseña", Toast.LENGTH_SHORT).show();
                 return;
             }
@@ -64,9 +63,7 @@ public class LoginFragment extends Fragment {
             UsuarioApiServicio api = RetrofitCliente.getUsuarioService();
             Map<String, String> body = new HashMap<>();
             body.put("email", email);
-            body.put("pa$$", password);
-
-
+            body.put("pa$$", pass);
 
             Call<Map<String, Object>> call = api.loginUsuario(body);
             call.enqueue(new Callback<Map<String, Object>>() {
@@ -84,7 +81,6 @@ public class LoginFragment extends Fragment {
 
                                 String usuarioId = userMap.get("_id").toString();
 
-                                // Guardar en SharedPreferences
                                 SharedPreferences prefs = requireActivity().getSharedPreferences("usuarioPrefs", Context.MODE_PRIVATE);
                                 prefs.edit().putString("usuarioId", usuarioId).apply();
 
@@ -101,16 +97,12 @@ public class LoginFragment extends Fragment {
                     }
                 }
 
-
-
                 @Override
                 public void onFailure(Call<Map<String, Object>> call, Throwable t) {
                     Toast.makeText(getContext(), "Error: " + t.getMessage(), Toast.LENGTH_SHORT).show();
                 }
             });
         });
-
-
 
         return view;
     }

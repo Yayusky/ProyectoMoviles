@@ -30,16 +30,20 @@
             app:destination="@id/plagasFragment" />
 
         <action
-            android:id="@+id/action_homeFragment_to_tiposCultivoFragment"
-            app:destination="@id/tiposCultivoFragment" />
+            android:id="@+id/action_homeFragment_to_tipoCultivosFragment"
+            app:destination="@id/tipoCultivosFragment" />
     </fragment>
 
-    <!-- Fragmentos de Destino -->
-<!--    <fragment-->
-<!--        android:id="@+id/huertaFragment"-->
-<!--        android:name="com.example.proyectomoviles.HuertaFragment"-->
-<!--        android:label="Huerta"-->
-<!--        tools:layout="@layout/fragment_huerta" />-->
+
+<!--     Fragmentos de Destino -->
+    <fragment
+        android:id="@+id/tipoCultivosFragment"
+        android:name="com.example.proyectomoviles.TipoCultivosFragment"
+        android:label="Huerta"
+        tools:layout="@layout/fragment_tipo_cultivos" />
+
+
+
     <fragment
         android:id="@+id/listaHuertosFragment"
         android:name="com.example.proyectomoviles.ListaHuertosFragment"
@@ -82,12 +86,10 @@
             android:id="@+id/action_detallePlantaFragment_to_registroHuertoFragment"
             app:destination="@id/registroHuertoFragment" />
     </fragment>
+
     <fragment
         android:id="@+id/registroHuertoFragment"
         android:name="com.example.proyectomoviles.RegistroHuertoFragment" />
-
-
-
 
 
 
@@ -112,17 +114,26 @@
             app:argType="com.example.proyectomoviles.modelos.Plaga" />
     </fragment>
 
-
-
-
-
-
-
+    <!-- Fragmento - Editar perfil -->
     <fragment
-        android:id="@+id/tiposCultivoFragment"
-        android:name="com.example.proyectomoviles.TipoCultivosFragment"
-        android:label="Tipos de Cultivo"
+        android:id="@+id/editarPerfil"
+        android:name="com.example.proyectomoviles.EditarPerfilFragment"
+        android:label="Editar Perfil"
+        tools:layout="@layout/fragment_editar_perfil"/>
+
+    <!-- Fragmento - Extra (el que quieras, vacío o placeholder) -->
+    <fragment
+        android:id="@+id/cultivos"
+        android:name="com.example.proyectomoviles.CultivosFragment"
+        android:label="Extra"
         tools:layout="@layout/fragment_tipo_cultivos" />
+
+
+
+
+
+
+
 <!--    <fragment-->
 <!--        android:id="@+id/loginFragment"-->
 <!--        android:name="com.example.proyectomoviles.ui.login.LoginFragment"-->

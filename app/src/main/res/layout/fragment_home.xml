@@ -14,7 +14,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Slembra"
+            android:text="Esto es PlantArte"
             android:textSize="32sp"
             android:textStyle="bold"
             android:textColor="@color/black"
@@ -31,12 +31,14 @@
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/cardHuerta"
                 android:layout_width="0dp"
-                android:layout_height="120dp"
+                android:layout_height="180dp"
                 android:layout_margin="8dp"
                 app:cardCornerRadius="12dp"
                 app:cardElevation="4dp"
                 app:layout_columnWeight="1"
-                app:layout_rowWeight="1">
+                app:layout_rowWeight="1"
+                app:cardBackgroundColor="#6A9D5F"
+                >
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -48,8 +50,8 @@
                     <ImageView
                         android:layout_width="48dp"
                         android:layout_height="48dp"
-                        android:src="@drawable/ic_huerta"
-                        app:tint="@color/green_dark" />
+                        android:src="@drawable/ic_huertas"
+                         />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -57,7 +59,7 @@
                         android:text="Huerta"
                         android:textSize="16sp"
                         android:textStyle="bold"
-                        android:textColor="@color/black"
+                        android:textColor="#ffff"
                         android:layout_marginTop="8dp" />
 
                 </LinearLayout>
@@ -72,7 +74,9 @@
                 app:cardCornerRadius="12dp"
                 app:cardElevation="4dp"
                 app:layout_columnWeight="1"
-                app:layout_rowWeight="1">
+                app:layout_rowWeight="1"
+                app:cardBackgroundColor="#6A9D5F"
+                >
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -84,8 +88,8 @@
                     <ImageView
                         android:layout_width="48dp"
                         android:layout_height="48dp"
-                        android:src="@drawable/ic_calendario"
-                        app:tint="@color/blue_dark" />
+                        android:src="@drawable/ic_temporada"
+                         />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -93,7 +97,7 @@
                         android:text="Calendario"
                         android:textSize="16sp"
                         android:textStyle="bold"
-                        android:textColor="@color/black"
+                        android:textColor="#ffff"
                         android:layout_marginTop="8dp" />
 
                 </LinearLayout>
@@ -104,12 +108,13 @@
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/cardPlagas"
                 android:layout_width="0dp"
-                android:layout_height="120dp"
+                android:layout_height="180dp"
                 android:layout_margin="8dp"
                 app:cardCornerRadius="12dp"
                 app:cardElevation="4dp"
                 app:layout_columnWeight="1"
-                app:layout_rowWeight="1">
+                app:layout_rowWeight="1"
+                app:cardBackgroundColor="#6A9D5F">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -121,8 +126,8 @@
                     <ImageView
                         android:layout_width="48dp"
                         android:layout_height="48dp"
-                        android:src="@drawable/ic_plagas"
-                        app:tint="@color/red_dark" />
+                        android:src="@drawable/ic_gusano"
+                         />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -130,7 +135,7 @@
                         android:text="Plagas"
                         android:textSize="16sp"
                         android:textStyle="bold"
-                        android:textColor="@color/black"
+                        android:textColor="#fff"
                         android:layout_marginTop="8dp" />
 
                 </LinearLayout>
@@ -145,7 +150,8 @@
                 app:cardCornerRadius="12dp"
                 app:cardElevation="4dp"
                 app:layout_columnWeight="1"
-                app:layout_rowWeight="1">
+                app:layout_rowWeight="1"
+                app:cardBackgroundColor="#6A9D5F">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -157,8 +163,8 @@
                     <ImageView
                         android:layout_width="48dp"
                         android:layout_height="48dp"
-                        android:src="@drawable/ic_cultivos"
-                        app:tint="@color/orange_dark" />
+                        android:src="@drawable/ic_tipo_cultivos"
+                         />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -166,7 +172,7 @@
                         android:text="Tipos de Cultivo"
                         android:textSize="14sp"
                         android:textStyle="bold"
-                        android:textColor="@color/black"
+                        android:textColor="#ffff"
                         android:layout_marginTop="8dp"
                         android:textAlignment="center" />
 
@@ -176,97 +182,54 @@
 
         </androidx.gridlayout.widget.GridLayout>
 
+
+
         <TextView
+            android:id="@+id/tvTituloConsejo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Tipos de Cultivos Sembrados en tu Huerto."
-            android:textSize="18sp"
+            android:layout_marginTop="25dp"
+            android:text="Tenemos estos consejos para ti!"
+            android:textSize="25sp"
             android:textStyle="bold"
             android:textColor="@color/black"
-            android:layout_marginBottom="16dp" />
+            android:layout_marginBottom="12dp" />
 
-        <!-- Card Vegetal -->
         <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+            android:layout_marginTop="25dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="2dp"
+        app:strokeColor="@color/green_light"
+        app:strokeWidth="1dp">
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:layout_marginBottom="12dp"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="2dp"
-            app:strokeColor="@color/green_light"
-            app:strokeWidth="1dp">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="16dp">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:gravity="center_vertical"
-                android:padding="16dp">
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_consejo"/> <!-- un ícono tipo bombilla/hoja -->/>
 
-                <ImageView
-                    android:layout_width="32dp"
-                    android:layout_height="32dp"
-                    android:src="@drawable/ic_vegetal"
-                    app:tint="@color/green_dark" />
+            <TextView
+                android:id="@+id/tvConsejo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:justificationMode="inter_word"
+                android:text="Cargando consejo..."
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:layout_marginStart="16dp" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Vegetal"
-                    android:textSize="16sp"
-                    android:textColor="@color/black"
-                    android:layout_marginStart="16dp" />
-
-                <ImageView
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:src="@drawable/ic_arrow_right"
-                    app:tint="@color/gray" />
-
-            </LinearLayout>
-
-        </com.google.android.material.card.MaterialCardView>
-
-        <!-- Card Otros Tipos -->
-        <com.google.android.material.card.MaterialCardView
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="2dp"
-            app:strokeColor="@color/orange_light"
-            app:strokeWidth="1dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:gravity="center_vertical"
-                android:padding="16dp">
-
-                <ImageView
-                    android:layout_width="32dp"
-                    android:layout_height="32dp"
-                    android:src="@drawable/ic_otros"
-                    app:tint="@color/orange_dark" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Otros Tipos"
-                    android:textSize="16sp"
-                    android:textColor="@color/black"
-                    android:layout_marginStart="16dp" />
-
-                <ImageView
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:src="@drawable/ic_arrow_right"
-                    app:tint="@color/gray" />
-
-            </LinearLayout>
-
-        </com.google.android.material.card.MaterialCardView>
 
     </LinearLayout>
 

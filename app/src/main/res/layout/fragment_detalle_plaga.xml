@@ -1,11 +1,18 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:layout_marginTop="20dp">
+
     <LinearLayout
         android:orientation="vertical"
         android:padding="16dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_width="345dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border"
+
+
+        >
 
         <!-- Imagen de la plaga -->
         <ImageView
@@ -18,40 +25,43 @@
         <!-- Nombre común -->
         <TextView
             android:id="@+id/textTituloPlaga"
+            android:layout_marginTop="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textStyle="bold"
-            android:textSize="20sp"
+            android:text="asdasdasdasdasd"
+            android:textSize="22sp"
             android:layout_marginBottom="2dp"
-            android:textColor="#222" />
+            android:textColor="#222"
+            android:justificationMode="inter_word"/>
 
         <!-- Nombre científico -->
         <TextView
             android:id="@+id/textNombreCientifico"
+            android:layout_marginTop="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="16sp"
+            android:textSize="18sp"
+            android:text="asdasdasdasdasd"
             android:textColor="#666"
-            android:layout_marginBottom="8dp" />
+            android:layout_marginBottom="8dp"
+            android:justificationMode="inter_word" />
 
         <!-- Descripción corta -->
         <TextView
             android:id="@+id/textDescripcionCorta"
             android:layout_width="wrap_content"
+            android:layout_marginTop="10dp"
             android:layout_height="wrap_content"
             android:textSize="14sp"
+            android:text="asdasdasdasdasd"
             android:layout_marginBottom="8dp"
-            android:textColor="#333" />
+            android:textColor="#333"
+            android:justificationMode="inter_word"/>
 
 
         <!-- Descripción larga -->
-        <TextView
-            android:id="@+id/textDescripcionLarga"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="14sp"
-            android:layout_marginBottom="12dp"
-            android:textColor="#333" />
+
 
         <!-- Título Soluciones -->
         <TextView
@@ -59,14 +69,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="¿Como Solucionarlo?"
+            android:layout_marginTop="10dp"
             android:textStyle="bold"
-            android:textSize="16sp"
+            android:textSize="22sp"
             android:layout_marginBottom="2dp"
-            android:textColor="#222" />
+            android:textColor="#222"
+            android:justificationMode="inter_word"/>
 
         <!-- Contenedor de remedios -->
         <LinearLayout
             android:id="@+id/layoutRemedios"
+            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"/>
